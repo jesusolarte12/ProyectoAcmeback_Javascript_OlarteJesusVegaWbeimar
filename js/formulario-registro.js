@@ -14,7 +14,8 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
     ciudad: document.getElementById('ciudad').value.trim().toUpperCase(),
     contrasena: document.getElementById('contrasena'),
     transacciones: {},
-    saldo: parseFloat(((Math.random() + 0.1) * 2500000).toFixed(2))
+    saldo: parseFloat(((Math.random() + 0.1) * 2500000).toFixed(2)),
+    fechaCreacion: new Date().toISOString()
   };
 
 
