@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACME BANK - Consignación</title>
+    <title>ACME BANK - Retiro</title>
+
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
     <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet" href="../css/consignacion.css">
+    <link rel="stylesheet" href="../css/retiro.css">
 </head>
 
 <body>
@@ -29,8 +30,8 @@
                 <div class="nav-menu" id="navMenu">
                     <a href="dashboard.html">Dashboard</a>
                     <a href="resumen-trans.html">Resumen</a>
-                    <a href="#" class="active">Cons Electrónica</a>
-                    <a href="../html/retiro.html" >Retiro</a>
+                    <a href="consignacion.html">Cons Electrónica</a>
+                    <a href="#" class="active">Retiro</a>
                     <a href="#">Extracto</a>
                     <a href="#">Certificado</a>
                 </div>
@@ -39,7 +40,7 @@
                     <div class="user-avatar" id="userAvatar">--</div>
                     <div class="user-details">
                         <h3 id="userName">Usuario</h3>
-                        <p id="userEmail">correo@ejemplo.com</p>
+                        <p id="userEmail">fecha de creación</p>
                     </div>
                     <button class="logout-btn" onclick="logout()">Salir</button>
                 </div>
@@ -50,8 +51,8 @@
     <main>
         <div class="contenedor">
             <section class="dashboard-titulo">
-                <h1>Consignación Electrónica</h1>
-                <p>Completa el formulario para realizar una consignación electrónica</p>
+                <h1>Retiro de Dinero</h1>
+                <p>Completa el formulario para retirar dinero de tu cuenta</p>
             </section>
 
             <section class="card">
@@ -61,17 +62,13 @@
             </section>
 
             <section class="card">
-                <h3>Formulario de Consignación</h3>
+                <h3>Formulario de Retiro</h3>
                 <form id="formRetiro">
                     <div class="form-group">
-                        <label for="cuentaDestino">Cuenta destino:</label>
-                        <input type="text" id="cuentaDestino" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="monto">Valor a consignar:</label>
+                        <label for="monto">Valor a retirar:</label>
                         <input type="number" id="monto" min="1" required>
                     </div>
-                    <button type="submit" class="btn-retiro">Realizar Consignación</button>
+                    <button type="submit" class="btn-retiro">Realizar Retiro</button>
                 </form>
                 <p id="mensaje" class="mensaje"></p>
             </section>
@@ -79,7 +76,7 @@
     </main>
 
     <script src="../db/conexion_db.js"></script>
-    <script src="../js/consignacion.js"></script>
+    <script src="../js/retiro.js"></script>
 </body>
 
 </html>
