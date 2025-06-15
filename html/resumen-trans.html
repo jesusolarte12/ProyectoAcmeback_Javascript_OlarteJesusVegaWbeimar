@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACME BANK - Resumen de Transacciones</title>
     <link rel="stylesheet" href="../css/resumen-trans.css">
 </head>
+
 <body>
     <header>
         <div class="contenedor">
@@ -13,7 +15,7 @@
                 <div class="logo-section">
                     <div class="logo">ACME BANK</div>
                 </div>
-                
+
                 <button class="menu-toggle" onclick="toggleMenu()">
                     <span></span>
                     <span></span>
@@ -23,8 +25,8 @@
                 <div class="nav-menu" id="navMenu">
                     <a href="../html/dashboard.html">Dashboard</a>
                     <a href="#" class="active">Resumen</a>
-                    <a href="#">Cons Electrónica</a>
-                    <a href="#">Retiro</a>
+                    <a href="../html/consignacion.html">Cons Electrónica</a>
+                    <a href="#  ">Retiro</a>
                     <a href="#">Extracto</a>
                     <a href="#">Certificado</a>
                 </div>
@@ -35,7 +37,7 @@
                         <h3></h3>
                         <p></p>
                     </div>
-                    <button class="logout-btn">Salir</button>
+                    <button class="logout-btn" onclick="logout()">Salir</button>
                 </div>
             </nav>
         </div>
@@ -80,7 +82,7 @@
                     <span>📊</span>
                     Historial de Transacciones
                 </h2>
-                
+
                 <div class="contenedor-tabla">
                     <table>
                         <thead>
@@ -171,4 +173,5 @@
     </main>
     <script src="../js/resumen-trans.js"></script>
 </body>
+
 </html>

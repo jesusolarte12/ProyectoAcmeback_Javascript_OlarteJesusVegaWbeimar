@@ -1,0 +1,43 @@
+/* retiro.css */
+.card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.btn-retiro {
+    padding: 0.7rem 1.5rem;
+    background-color: #0077cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-retiro:hover {
+    background-color: #005fa3;
+}
+
+.mensaje {
+    margin-top: 1rem;
+    font-weight: bold;
+}

@@ -60,3 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const saldoFormateado = `$${usuario.saldo.toLocaleString('es-CO', { minimumFractionDigits: 2 })}`;
     items[3].querySelector(".valor").textContent = saldoFormateado;
 });
+
+function logout() {
+    localStorage.removeItem('usuarioActivo');
+    window.location.href = "../html/inicio-sesion.html";
+}
