@@ -44,6 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const items = document.querySelectorAll(".summary-grid .items");
 
+    // ✅ Mostrar número de cuenta real (numeroId)
+    if (usuario.numeroId) {
+        items[0].querySelector(".valor").textContent = usuario.numeroId;
+    }
+
     items[1].querySelector(".valor").textContent = nombreCompleto;
 
     const hoy = new Date();
@@ -57,11 +62,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
     items[2].querySelector(".valor").textContent = `${formatDate(hace10Dias)} - ${formatDate(hoy)}`;
 
-    const saldoFormateado = `$${usuario.saldo.toLocaleString('es-CO', { minimumFractionDigits: 2 })}`;
+    const saldoFormateado = `$${usuario.saldo.toLocaleString('es-CO', { minimumFractionDigits: 2 })} COP`;
     items[3].querySelector(".valor").textContent = saldoFormateado;
+
+    // ✅ Mostrar transacciones en la tabla
+    if (usuario.transacciones) {
+        const transacciones = Object.values(usuario.transacciones);
+        transacciones.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+        const ultimas10 = transacciones.slice(0, 10);
+
+        const tbody = document.querySelector(".transactions-table tbody");
+        tbody.innerHTML = "";
+
+        ultimas10.forEach(tx => {
+            const fechaObj = new Date(tx.fecha);
+            const fechaTexto = fechaObj.toLocaleDateString('es-CO', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+            const horaTexto = fechaObj.toLocaleTimeString('es-CO', {
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: true
+            });
+
+            const valorFormateado = `$${Math.abs(tx.valor).toLocaleString('es-CO')}`;
+            const signo = tx.valor < 0 ? '-' : '+';
+            const claseMonto = tx.valor < 0 ? 'monto-negativo' : 'monto-positivo';
+
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td class="fecha">${fechaTexto}<br><span>${horaTexto}</span></td>
+                <td class="ref-number">${tx.referencia || '---'}</td>
+                <td><span class="tipo-transaccion">${capitalizar(tx.tipo || '')}</span></td>
+                <td class="descripcion">${tx.descripcion || ''}</td>
+                <td class="${claseMonto}">${signo}${valorFormateado}</td>
+            `;
+            tbody.appendChild(fila);
+        });
+    }
 });
 
 function logout() {
     localStorage.removeItem('usuarioActivo');
     window.location.href = "../html/inicio-sesion.html";
+}
+
+function capitalizar(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }
