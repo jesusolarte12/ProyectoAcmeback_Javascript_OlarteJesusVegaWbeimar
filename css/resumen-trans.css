@@ -1,136 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    color: #2c2c2c;
-    line-height: 1.6;
-}
-
-.contenedor {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header {
-    background: #ffffff;
-    border-bottom: 2px solid #b8860b;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: relative;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    position: relative;
-}
-
-.logo-section {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #8b4513;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.5rem 1rem;
-    background: #f5f5f5;
-    border-radius: 8px;
-    border-left: 4px solid #b8860b;
-}
-
-.user-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #b8860b, #daa520);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.user-details h3 {
-    color: #2c2c2c;
-    font-size: 1rem;
-    margin-bottom: 2px;
-}
-
-.user-details p {
-    color: #666;
-    font-size: 0.85rem;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: #2c2c2c;
-    font-weight: 500;
-    padding: 0.5rem 0;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.nav-menu a:hover,
-.nav-menu a.active {
-    color: #b8860b;
-    border-bottom-color: #b8860b;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 0.5rem;
-    background: none;
-    border: none;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #8b4513;
-    margin: 3px 0;
-    transition: 0.3s;
-    border-radius: 2px;
-}
-
-.logout-btn {
-    background: #dc3545;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background 0.3s ease;
-}
-
-.logout-btn:hover {
-    background: #c82333;
-}
-
 main {
     padding: 2rem 0;
 }
@@ -296,6 +163,7 @@ td {
     white-space: nowrap;
 }
 
+/* Estilos para impresión */
 @media print {
     body {
         background: white;
@@ -307,14 +175,8 @@ td {
         border-bottom: 2px solid #000;
     }
     
-    .print-btn {
-        display: none;
-    }
-    
-    .nav-menu {
-        display: none;
-    }
-    
+    .print-btn,
+    .nav-menu,
     .logout-btn {
         display: none;
     }
@@ -324,67 +186,19 @@ td {
         box-shadow: none;
         border: 1px solid #ddd;
     }
-    
+
     table {
         min-width: auto;
     }
-    
+
     th, td {
         padding: 0.5rem;
         font-size: 0.85rem;
     }
 }
 
+/* Responsive ajustes 768px */
 @media (max-width: 768px) {
-    .contenedor {
-        padding: 0 15px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        position: relative;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .menu-toggle {
-        display: flex;
-        order: 2;
-    }
-
-    .user-info {
-        order: 3;
-        width: 100%;
-        margin-top: 1rem;
-        padding: 0.75rem;
-        gap: 0.75rem;
-    }
-
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: white;
-        flex-direction: column;
-        gap: 0;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        border-top: 1px solid #e9ecef;
-        z-index: 1000;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .nav-menu a {
-        padding: 1rem 1.5rem;
-        border-bottom: 1px solid #f0f0f0;
-    }
-
     .page-header {
         flex-direction: column;
         align-items: stretch;
@@ -418,6 +232,7 @@ td {
     }
 }
 
+/* Responsive ajustes 480px */
 @media (max-width: 480px) {
     .titulo h1 {
         font-size: 1.3rem;

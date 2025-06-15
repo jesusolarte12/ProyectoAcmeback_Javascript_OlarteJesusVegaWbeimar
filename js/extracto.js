@@ -8,14 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const nombreCompleto = `${usuario.nombre} ${usuario.apellidos}`;
-    document.querySelector(".user-details h3").textContent = nombreCompleto;
+    document.getElementById("numeroCuenta").textContent = usuario.numeroId;
+    document.getElementById("nombreTitular").textContent = nombreCompleto;
 
-    const fecha = new Date(usuario.fechaCreacion);
-    const fechaFormateada = fecha.toLocaleDateString('es-CO', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    });
+
     document.querySelector('.user-details p').textContent = fechaFormateada;
 
     const avatar = document.querySelector(".user-avatar");
@@ -36,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("todos").addEventListener("click", function () {
-    generarExtractoCompleto();
-});
+        generarExtractoCompleto();
+    });
 });
 
 function mostrarSelectorMesAnio() {

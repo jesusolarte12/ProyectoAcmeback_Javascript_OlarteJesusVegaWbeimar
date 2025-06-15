@@ -1,29 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     const usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
-
     if (!usuario) {
         alert('Sesión expirada. Por favor inicia sesión.');
         window.location.href = "../html/inicio-sesion.html";
         return;
     }
 
+    // Mostrar datos de cuenta
     const nombreCompleto = `${usuario.nombre} ${usuario.apellidos}`;
-    document.querySelector(".user-details h3").textContent = nombreCompleto;
-
-    const fecha = new Date(usuario.fechaCreacion);
-    const fechaFormateada = fecha.toLocaleDateString('es-CO', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    });
-    document.querySelector('.user-details p').textContent = fechaFormateada;
-
-    const avatar = document.querySelector(".user-avatar");
-    if (avatar) {
-        const iniciales = `${usuario.nombre[0]}${usuario.apellidos[0]}`.toUpperCase();
-        avatar.textContent = iniciales;
-    }
-
     document.getElementById("numeroCuenta").textContent = usuario.numeroId;
     document.getElementById("nombreTitular").textContent = nombreCompleto;
 
@@ -79,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
             mensaje.textContent = "Retiro realizado con éxito.";
             mensaje.style.color = "green";
             form.reset();
-
         } catch (error) {
             console.error(error);
             mensaje.textContent = "Error al realizar el retiro.";
@@ -87,8 +70,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-function logout() {
-    localStorage.removeItem('usuarioActivo');
-    window.location.href = "../html/inicio-sesion.html";
-}
