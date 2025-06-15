@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const items = document.querySelectorAll(".summary-grid .items");
 
-    // ✅ Mostrar número de cuenta real (numeroId)
     if (usuario.numeroId) {
         items[0].querySelector(".valor").textContent = usuario.numeroId;
     }
@@ -65,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const saldoFormateado = `$${usuario.saldo.toLocaleString('es-CO', { minimumFractionDigits: 2 })} COP`;
     items[3].querySelector(".valor").textContent = saldoFormateado;
 
-    // ✅ Mostrar transacciones en la tabla
     if (usuario.transacciones) {
         const transacciones = Object.values(usuario.transacciones);
         transacciones.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));

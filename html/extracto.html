@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME BANK - Consignación</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/extracto.css">
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <nav>
+                <div class="logo-section">
+                    <div class="logo">ACME BANK</div>
+                </div>
+
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="resumen-trans.html">Resumen</a>
+                    <a href="/html/consignacion.html">Cons Electrónica</a>
+                    <a href="../html/retiro.html" >Retiro</a>
+                    <a href="#" class="active">Extracto</a>
+                    <a href="#">Certificado</a>
+                </div>
+
+                <div class="user-info">
+                    <div class="user-avatar" id="userAvatar">--</div>
+                    <div class="user-details">
+                        <h3 id="userName"></h3>
+                        <p id="userEmail"></p>
+                    </div>
+                    <button class="logout-btn" onclick="logout()">Salir</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <section class="dashboard-titulo">
+                <h1>Consignación Electrónica</h1>
+                <p>Completa el formulario para realizar una consignación electrónica</p>
+            </section>
+
+            <section class="card">
+                <h3>Datos de la Cuenta</h3>
+                <p><strong>Número de Cuenta:</strong> <span id="numeroCuenta">---</span></p>
+                <p><strong>Nombre del Titular:</strong> <span id="nombreTitular">---</span></p>
+            </section>
+
+            <section class="card">
+                <button class="btn-extracto" id="mes">Extracto mensual</button>
+                <button class="btn-extracto" id="anual">Extracto anual</button>
+                <button class="btn-extracto" id="todos">Extracto completo</button>
+            </section>
+        </div>
+    </main>
+
+    <script src="../db/conexion_db.js"></script>
+    <script src="../js/extracto.js"></script>
+</body>
+
+</html>
