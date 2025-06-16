@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" href="../css/formulario-registro.css">
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  
+</head>
+<body>
+  <h1 class="titulo-formulario">Crear Cuenta</h1>
+
+  <form id="registerForm" class="formulario-grid">
+    <div class="form-group">
+      <label for="tipoId">Tipo de Identificación:</label>
+      <select id="tipoId" required>
+        <option value="">Seleccione</option>
+        <option value="TI">TI</option>
+        <option value="CC">CC</option>
+        <option value="PPT">PPT</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="numeroId">Número de Identificación:</label>
+      <input type="number" id="numeroId" minlength="8" maxlength="14" required>
+    </div>
+
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+    </div>
+
+    <div class="form-group">
+      <label for="segundoNombre">Segundo Nombre:</label>
+      <input type="text" id="segundoNombre">
+    </div>
+
+    <div class="form-group">
+      <label for="apellidos">Apellidos:</label>
+      <input type="text" id="apellidos" required>
+    </div>
+
+    <div class="form-group">
+      <label for="genero">Género:</label>
+      <select id="genero" required>
+        <option value="">Seleccione</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" required>
+    </div>
+
+    <div class="form-group">
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" required>
+    </div>
+
+    <div class="form-group">
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" required>
+    </div>
+
+    <div class="form-group">
+      <label for="ciudad">Ciudad de residencia:</label>
+      <select id="ciudad" required>
+        <option value="">Seleccione</option>
+        <option value="Bogotá">Bogotá</option>
+        <option value="Medellín">Medellín</option>
+        <option value="Cali">Cali</option>
+        <option value="Otra">Otra</option>
+      </select>
+    </div>
+
+    <div class="form-group full-width">
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" required>
+    </div>
+
+    <a href="#">Volver al inicio de sesion</a>
+
+    <div class="form-group full-width">
+      <button type="submit">Registrar</button>
+    </div>
+  </form>
+
+
+  <script src="../db/conexion_db.js"></script>
+  <script src="../js/formulario-registro.js"></script>
+</body>
+</html>
