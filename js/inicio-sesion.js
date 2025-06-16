@@ -14,7 +14,8 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         const usuario = datosDB[numeroId];
 
         if (usuario.contrasena === contrasena) {
-          alert("Inicio de sesión correcto");
+          localStorage.setItem('usuarioActivo', JSON.stringify(usuario));
+          window.location.href = "dashboard.html"; 
         } else {
           alert("Contraseña incorrecta");
         }

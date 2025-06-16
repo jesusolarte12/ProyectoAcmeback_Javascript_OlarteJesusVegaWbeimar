@@ -40,7 +40,7 @@
 }
 
 .btn-extracto {
-    background: linear-gradient(135deg, #b8860b, #daa520);
+    background: #b8860b ;
     color: white;
     border: none;
     padding: 0.4rem 1rem;
@@ -51,4 +51,8 @@
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(184, 134, 11, 0.3);
     white-space: nowrap;
+}
+.btn-extracto:hover{
+
+    background-color: #daa520;
 }

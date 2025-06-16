@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const monto = parseFloat(document.getElementById("monto").value);
 
         if (monto <= 0) {
-            mensaje.textContent = "El valor debe ser mayor a 0.";
+            mensaje.textContent = "El valor debe ser superior a 0.";
             mensaje.style.color = "red";
             return;
         }

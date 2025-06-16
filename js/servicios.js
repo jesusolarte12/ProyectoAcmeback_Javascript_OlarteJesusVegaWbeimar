@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const valor = parseFloat(document.getElementById("valor").value);
 
         if (isNaN(valor) || valor <= 0) {
-            mensaje.textContent = "El valor debe ser un número positivo.";
+            mensaje.textContent = "El valor debe ser superior a 0.";
             mensaje.style.color = "red";
             return;
         }

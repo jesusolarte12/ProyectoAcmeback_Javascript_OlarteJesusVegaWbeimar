@@ -24,6 +24,18 @@ document.addEventListener("DOMContentLoaded", function () {
             mensaje.style.color = "red";
             return;
         }
+        
+        if (isNaN(monto) || monto <= 0) {
+            mensaje.textContent = "El valor debe ser superior a 0.";
+            mensaje.style.color = "red";
+            return;
+        }
+
+        if (usuario.saldo < monto) {
+            mensaje.textContent = "No tienes saldo suficiente para realizar esta consignación.";
+            mensaje.style.color = "red";
+            return;
+        }
 
         const db = firebase.database();
         const refUsuarios = db.ref("usuarios");
