@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="../css/inicio-sesion.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>Iniciar Sesión</h1>
+    <form id="loginForm">
+      <label for="numeroId">Número de Identificación:</label>
+      <input type="text" id="numeroId" required>
+
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" required>
+
+      <div class="links-contenedor">
+        <a href="recuperar-contraseña.html">¿Olvidaste tu contraseña?</a>
+        <a href="crear-cuenta.html">Crear cuenta</a>
+      </div>
+
+
+      <button type="submit">Ingresar</button>
+    </form>
+    <div id="mensaje"></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <script src="../db/conexion_db.js"></script>
+  <script src="../js/inicio-sesion.js"></script>
+</body>
+</html>
