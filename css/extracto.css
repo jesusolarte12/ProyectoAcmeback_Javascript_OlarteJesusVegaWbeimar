@@ -1,11 +1,3 @@
-.card {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 #modalExtracto {
     position: fixed;
     top: 0;

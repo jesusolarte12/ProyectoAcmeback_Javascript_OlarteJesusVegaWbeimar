@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // Mostrar datos de cuenta
     const nombreCompleto = `${usuario.nombre} ${usuario.apellidos}`;
     document.getElementById("numeroCuenta").textContent = usuario.numeroId;
     document.getElementById("nombreTitular").textContent = nombreCompleto;

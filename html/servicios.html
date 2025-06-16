@@ -2,15 +2,13 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACME BANK - Retiro</title>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACME BANK - Servicios</title>
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/servicios.css" />
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet" href="../css/retiro.css">
 </head>
 
 <body>
@@ -22,26 +20,24 @@
                 </div>
 
                 <button class="menu-toggle" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </button>
 
                 <div class="nav-menu" id="navMenu">
                     <a href="dashboard.html">Dashboard</a>
                     <a href="resumen-trans.html">Resumen</a>
                     <a href="consignacion.html">Cons Electrónica</a>
-                    <a href="#" class="active">Retiro</a>
-                    <a href="../html/servicios.html">Servicios</a>
-                    <a href="../html/extracto.html">Extracto</a>
-                    <a href="../html/certificado.html">Certificado</a>
+                    <a href="retiro.html">Retiro</a>
+                    <a href="servicios.html" class="active">Servicios</a>
+                    <a href="extracto.html">Extracto</a>
+                    <a href="certificado.html">Certificado</a>
                 </div>
 
                 <div class="user-info">
                     <div class="user-avatar" id="userAvatar">--</div>
                     <div class="user-details">
                         <h3 id="userName">Usuario</h3>
-                        <p id="userEmail">fecha de creación</p>
+                        <p id="userEmail">correo@ejemplo.com</p>
                     </div>
                     <button class="logout-btn" onclick="logout()">Salir</button>
                 </div>
@@ -52,8 +48,8 @@
     <main>
         <div class="contenedor">
             <section class="dashboard-titulo">
-                <h1>Retiro de Dinero</h1>
-                <p>Completa el formulario para retirar dinero de tu cuenta</p>
+                <h1>Pago de Servicios Públicos</h1>
+                <p>Completa el formulario para realizar el pago de un servicio público</p>
             </section>
 
             <section class="card">
@@ -62,23 +58,32 @@
                 <p><strong>Nombre del Titular:</strong> <span id="nombreTitular">---</span></p>
             </section>
 
-            <section class="card">
-                <h3>Formulario de Retiro</h3>
-                <form id="formRetiro">
-                    <div class="form-group">
-                        <label for="monto">Valor a retirar:</label>
-                        <input type="number" id="monto" min="1" required>
-                    </div>
-                    <button type="submit" class="btn-retiro">Realizar Retiro</button>
-                </form>
-                <p id="mensaje" class="mensaje"></p>
+            <section class="card" style="margin-bottom: 30px;">
+                <h3>Formulario de Pago</h3>
+                <div class="form-group">
+                    <label for="servicio">Servicio:</label>
+                    <select id="servicio">
+                        <option value="Energía">Energía</option>
+                        <option value="Agua">Agua</option>
+                        <option value="Gas natural">Gas natural</option>
+                        <option value="Internet">Internet</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="valor">Valor a pagar:</label>
+                    <input type="number" id="valor" min="1" required>
+                </div>
+
+                <button id="btnPagar" class="btn-retiro">Pagar servicio</button>
+                <p id="mensajePago" class="mensaje"></p>
             </section>
         </div>
     </main>
 
     <script src="../db/conexion_db.js"></script>
     <script src="../js/dashboard.js"></script>
-    <script src="../js/retiro.js"></script>
+    <script src="../js/servicios.js"></script>
 </body>
 
 </html>
