@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME BANK - Resumen de Transacciones</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/resumen-trans.css">
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <nav>
+                <div class="logo-section">
+                    <div class="logo">ACME BANK</div>
+                </div>
+
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="../html/dashboard.html">Dashboard</a>
+                    <a href="#" class="active">Resumen</a>
+                    <a href="../html/consignacion.html">Cons Electrónica</a>
+                    <a href="../html/retiro.html" >Retiro</a>
+                    <a href="../html/servicios.html">Servicios</a>
+                    <a href="../html/extracto.html">Extracto</a>
+                    <a href="../html/certificado.html">Certificado</a>
+                </div>
+
+                <div class="user-info">
+                    <div class="user-avatar"></div>
+                    <div class="user-details">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <button class="logout-btn" onclick="logout()">Salir</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <div class="page-header">
+                <div class="titulo">
+                    <h1>Resumen de Transacciones</h1>
+                    <p>Últimas 10 transacciones realizadas en tu cuenta</p>
+                </div>
+                <button class="print-btn" onclick="imprimir()">
+                    <span>🖨️</span>
+                    Imprimir Resumen
+                </button>
+            </div>
+
+            <div class="cuenta">
+                <div class="summary-grid">
+                    <div class="items">
+                        <h4>Cuenta</h4>
+                        <div class="valor">**** **** **** 1234</div>
+                    </div>
+                    <div class="items">
+                        <h4>Titular</h4>
+                        <div class="valor">Jesus Olarte</div>
+                    </div>
+                    <div class="items">
+                        <h4>Período</h4>
+                        <div class="valor">05 Jun - 14 Jun 2025</div>
+                    </div>
+                    <div class="items">
+                        <h4>Saldo Actual</h4>
+                        <div class="valor">$2,450,000 COP</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transactions-table">
+                <h2>
+                    <span>📊</span>
+                    Historial de Transacciones
+                </h2>
+
+                <div class="contenedor-tabla">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Referencia</th>
+                                <th>Tipo</th>
+                                <th>Descripción</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/resumen-trans.js"></script>
+</body>
+
+</html>

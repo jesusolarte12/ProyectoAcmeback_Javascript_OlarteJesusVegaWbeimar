@@ -1,0 +1,262 @@
+main {
+    padding: 2rem 0;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.titulo {
+    flex: 1;
+}
+
+.titulo h1 {
+    color: #2c2c2c;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.titulo p {
+    color: #666;
+}
+
+.print-btn {
+    background: linear-gradient(135deg, #b8860b, #daa520);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(184, 134, 11, 0.3);
+}
+
+.print-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(184, 134, 11, 0.4);
+}
+
+.cuenta {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 4px solid #b8860b;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.items h4 {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.items .valor {
+    color: #2c2c2c;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.transactions-table {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.transactions-table h2 {
+    color: #2c2c2c;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contenedor-tabla {
+    overflow-x: auto;
+    margin: -1rem;
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+th {
+    background: #f8f9fa;
+    color: #2c2c2c;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    font-size: 0.95rem;
+}
+
+.ref-number {
+    font-family: monospace;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.tipo-transaccion {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.type-transferencia {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.monto-positivo {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.monto-negativo {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.fecha {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.descripcion {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Estilos para impresión */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    header {
+        box-shadow: none;
+        border-bottom: 2px solid #000;
+    }
+    
+    .print-btn,
+    .nav-menu,
+    .logout-btn {
+        display: none;
+    }
+    
+    .transactions-table,
+    .cuenta {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    table {
+        min-width: auto;
+    }
+
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive ajustes 768px */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .titulo h1 {
+        font-size: 1.5rem;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contenedor-tabla {
+        margin: -0.5rem;
+        padding: 0.5rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .descripcion {
+        max-width: 150px;
+    }
+}
+
+/* Responsive ajustes 480px */
+@media (max-width: 480px) {
+    .titulo h1 {
+        font-size: 1.3rem;
+    }
+
+    .transactions-table,
+    .cuenta {
+        padding: 1rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 0.5rem 0.25rem;
+    }
+
+    .tipo-transaccion {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .descripcion {
+        max-width: 100px;
+    }
+}

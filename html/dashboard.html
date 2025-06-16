@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME BANK - Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <nav>
+                <div class="logo-section">
+                    <div class="logo">ACME BANK</div>
+                </div>
+                
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="#" class="active">Dashboard</a>
+                    <a href="../html/resumen-trans.html">Resumen</a>
+                    <a href="../html/consignacion.html">Cons Electrónica</a>
+                    <a href="../html/retiro.html" >Retiro</a>
+                    <a href="../html/servicios.html">Servicios</a>
+                    <a href="../html/extracto.html">Extracto</a>
+                    <a href="../html/certificado.html">Certificado</a>
+                </div>
+
+                <div class="user-info">
+                    <div class="user-avatar" id="userAvatar">JP</div>
+                    <div class="user-details">
+                        <h3 id="userName"></h3>
+                        <p></p>
+                    </div>
+                    <button class="logout-btn" onclick="logout()">Salir</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <div class="dashboard-titulo">
+                <h1>Bienvenido a tu Dashboard</h1>
+                <p>Gestiona tus finanzas de manera segura y eficiente</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>
+                        <span class="card-icon">💳</span>
+                        Cuenta Corriente
+                    </h3>
+                    <div class="balance-monto"></div>
+                    <div class="balance-currency">Pesos Colombianos</div>
+                </div>
+            </div>
+
+            <div class="transacciones-recientes" id="transaccionesRecientes">
+                <h2>Transacciones Recientes</h2>
+
+                
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

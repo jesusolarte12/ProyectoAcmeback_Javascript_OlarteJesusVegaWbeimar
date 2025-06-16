@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME BANK - Consignación</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/consignacion.css">
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <nav>
+                <div class="logo-section">
+                    <div class="logo">ACME BANK</div>
+                </div>
+
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="resumen-trans.html">Resumen</a>
+                    <a href="#" class="active">Cons Electrónica</a>
+                    <a href="../html/retiro.html">Retiro</a>
+                    <a href="../html/servicios.html">Servicios</a>
+                    <a href="../html/extracto.html">Extracto</a>
+                    <a href="../html/certificado.html">Certificado</a>
+                </div>
+
+                <div class="user-info">
+                    <div class="user-avatar" id="userAvatar">--</div>
+                    <div class="user-details">
+                        <h3 id="userName">Usuario</h3>
+                        <p id="userEmail">correo@ejemplo.com</p>
+                    </div>
+                    <button class="logout-btn" onclick="logout()">Salir</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <section class="dashboard-titulo">
+                <h1>Consignación Electrónica</h1>
+                <p>Completa el formulario para realizar una consignación electrónica</p>
+            </section>
+
+            <section class="card">
+                <h3>Datos de la Cuenta</h3>
+                <p><strong>Número de Cuenta:</strong> <span id="numeroCuenta">---</span></p>
+                <p><strong>Nombre del Titular:</strong> <span id="nombreTitular">---</span></p>
+            </section>
+
+            <section class="card">
+                <h3>Formulario de Consignación</h3>
+                <form id="formRetiro">
+                    <div class="form-group">
+                        <label for="cuentaDestino">Cuenta destino:</label>
+                        <input type="text" id="cuentaDestino" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="monto">Valor a consignar:</label>
+                        <input type="number" id="monto" min="1" required>
+                    </div>
+                    <button type="submit" class="btn-retiro">Realizar Consignación</button>
+                </form>
+                <p id="mensaje" class="mensaje"></p>
+            </section>
+        </div>
+    </main>
+
+    <script src="../db/conexion_db.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/consignacion.js"></script>
+</body>
+
+</html>

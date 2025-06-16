@@ -1,0 +1,34 @@
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.btn-retiro {
+    padding: 0.7rem 1.5rem;
+    background-color: #b8860b;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-retiro:hover {
+    background-color: #1e6f1e;
+}
+
+.mensaje {
+    margin-top: 1rem;
+    font-weight: bold;
+}
