@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         if (isNaN(monto) || monto <= 0) {
-            mensaje.textContent = "Ingresa un valor válido para consignar.";
+            mensaje.textContent = "El valor debe ser superior a 0.";
             mensaje.style.color = "red";
             return;
         }
