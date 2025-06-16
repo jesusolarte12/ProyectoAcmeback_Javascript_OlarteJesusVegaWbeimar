@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME BANK - Certificado</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/certificado.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <nav>
+                <div class="logo-section">
+                    <div class="logo">ACME BANK</div>
+                </div>
+
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="../html/dashboard.html">Dashboard</a>
+                    <a href="../html/resumen-trans.html">Resumen</a>
+                    <a href="../html/consignacion.html">Cons Electrónica</a>
+                    <a href="../html/retiro.html">Retiro</a>
+                    <a href="../html/extracto.html">Extracto</a>
+                    <a href="#" class="active">Certificado</a>
+                </div>
+
+                <div class="user-info">
+                    <div class="user-avatar" id="userAvatar">XX</div>
+                    <div class="user-details">
+                        <h3 id="userName"></h3>
+                        <p id="userFecha"></p>
+                    </div>
+                    <button class="logout-btn" onclick="logout()">Salir</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <div class="certificado-container">
+                <h2>Certificado Bancario</h2>
+                <p id="textoCertificado" class="texto-certificado"></p>
+
+                <table class="tabla-certificado">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Cuenta</th>
+                            <th>Número</th>
+                            <th>Fecha de Apertura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cuenta de Ahorros</td>
+                            <td id="numeroCuenta"></td>
+                            <td id="fechaApertura"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button class="btn-imprimir" onclick="imprimir()">Imprimir</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/certificado.js"></script>
+</body>
+</html>

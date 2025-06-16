@@ -11,17 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("numeroCuenta").textContent = usuario.numeroId;
     document.getElementById("nombreTitular").textContent = nombreCompleto;
 
-
-    document.querySelector('.user-details p').textContent = fechaFormateada;
+    const fechaFormateada = new Date().toLocaleDateString('es-CO');
+    const fechaElement = document.querySelector('.user-details p');
+    if (fechaElement) {
+        fechaElement.textContent = fechaFormateada;
+    }
 
     const avatar = document.querySelector(".user-avatar");
     if (avatar) {
         const iniciales = `${usuario.nombre[0]}${usuario.apellidos[0]}`.toUpperCase();
         avatar.textContent = iniciales;
     }
-
-    document.getElementById("numeroCuenta").textContent = usuario.numeroId;
-    document.getElementById("nombreTitular").textContent = nombreCompleto;
 
     document.getElementById("mes").addEventListener("click", function () {
         mostrarSelectorMesAnio();
@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         generarExtractoCompleto();
     });
 });
+
 
 function mostrarSelectorMesAnio() {
     const selector = document.createElement("div");
