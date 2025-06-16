@@ -13,8 +13,6 @@ Este proyecto es una simulación de una plataforma bancaria en línea que permit
   - Crear cuenta.
   - Recordar contraseña.
 
----
-
 ### 📝 Formulario de Registro
 - **Tipo de identificación**: TI, CC, PPT *(obligatorio)*.
 - **Número de identificación**: entre 8 y 14 dígitos *(obligatorio)*.
@@ -22,8 +20,6 @@ Este proyecto es una simulación de una plataforma bancaria en línea que permit
 - **Apellidos** *(obligatorio)*.
 - **Género**, **teléfono**, **correo electrónico**, **dirección**, **ciudad**, **contraseña** *(todos obligatorios)*.
 - **Botón cancelar** (hipervínculo) *(obligatorio)*.
-
----
 
 ### 🔑 Recuperación de Contraseña
 1. **Verificación de identidad:**
@@ -34,16 +30,12 @@ Este proyecto es una simulación de una plataforma bancaria en línea que permit
    - Nueva contraseña.
    - Confirmar nueva contraseña.
 
----
-
 ## 📊 Dashboard Principal
 
 ### Información general:
 - Número de cuenta bancaria.
 - Saldo actual.
 - Fecha de creación de la cuenta.
-
----
 
 ## 📁 Módulos del Menú
 
@@ -56,8 +48,6 @@ Este proyecto es una simulación de una plataforma bancaria en línea que permit
   - Descripción.
   - Valor.
 - Botón para **imprimir resumen**.
-
----
 
 ### 💰 Consignación Electrónica
 - Muestra:
@@ -73,8 +63,6 @@ Este proyecto es una simulación de una plataforma bancaria en línea que permit
   - Valor consignado.
 - Aumenta el saldo.
 - Opción para **imprimir resumen**.
-
----
 
 ### 🏧 Retiro de Dinero
 - Muestra:
@@ -94,8 +82,6 @@ Este proyecto es una simulación de una plataforma bancaria en línea que permit
 - Disminuye el saldo.
 - Opción para **imprimir resumen**.
 
----
-
 ### 🧾 Pago de Servicios Públicos
 - Muestra:
   - Número de cuenta.
@@ -112,8 +98,6 @@ Este proyecto es una simulación de una plataforma bancaria en línea que permit
 - Disminuye el saldo.
 - Opción para **imprimir resumen**.
 
----
-
 ### 📈 Extracto Bancario
 - Muestra:
   - Número de cuenta.
@@ -129,8 +113,6 @@ Este proyecto es una simulación de una plataforma bancaria en línea que permit
   - Descripción.
   - Valor.
 
----
-
 ### 📄 Certificado Bancario
 - Certifica que el usuario tiene una cuenta activa.
 - Incluye:
@@ -138,20 +120,13 @@ Este proyecto es una simulación de una plataforma bancaria en línea que permit
 - Posibilidad de **imprimir el certificado**.
 - Basado en un módulo de certificados bancarios existente.
 
----
-
 ## 🚧 Estado del Proyecto
 > 🟡 En desarrollo – Se están construyendo los formularios y la lógica de transacciones. Próximamente se integrarán funcionalidades de impresión y validación avanzada.
-
----
 
 ## 📌 Requisitos Técnicos
 - Lenguajes sugeridos: HTML, CSS, JavaScript.
 - Framework o stack opcional: React / Angular / Vue + Node.js / Express + MongoDB / Firebase.
 - Estilo limpio y responsive.
 
----
-
 ## 📬 Contacto
 > Para más información o colaboración, contacta al equipo de desarrollo.
-
