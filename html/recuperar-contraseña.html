@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cambio de Contraseña</title>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <link rel="stylesheet" href="../css/recuperar-contraseña.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Cambiar Contraseña</h2>
+    <form id="cambioForm">
+      <label for="numeroId">Número de Identificación:</label>
+      <input type="text" id="numeroId" required>
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="nuevaContrasena">Nueva Contraseña:</label>
+      <input type="password" id="nuevaContrasena" required>
+
+      <a href="../html/inicio-sesion.html">Volver atras</a>
+
+      <button type="submit">Actualizar Contraseña</button>
+    </form>
+  </div>
+  <script src="../db/conexion_db.js"></script>
+  <script src="../js/recuperar-contraseña.js"></script>
+</body>
+
+</html>
