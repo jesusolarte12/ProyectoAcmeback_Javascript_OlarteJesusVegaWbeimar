@@ -1,6 +1,9 @@
 # 💳 Proyecto Bancario
 
 Este proyecto es una simulación de una plataforma bancaria en línea que permite a los usuarios registrarse, iniciar sesión y gestionar diversas operaciones financieras como consignaciones, retiros, pagos de servicios y consulta de extractos.
+## Integrantes 👨‍💻
+- Jesús Olarte
+- Wbeimar Vega
 
 ## 🛠️ Funcionalidades Principales
 
@@ -27,8 +30,9 @@ Este proyecto es una simulación de una plataforma bancaria en línea que permit
    - Número de identidad.
    - Correo electrónico.
 2. **Cambio de contraseña:**
+   - Numero de documento
+   - Nombre.
    - Nueva contraseña.
-   - Confirmar nueva contraseña.
 
 ## 📊 Dashboard Principal
 
